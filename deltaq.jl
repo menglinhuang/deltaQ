@@ -82,7 +82,7 @@ vector = total_dr/sqrt(sum_dr)  # define eigenvector
 dq = 0.0
 norm = 0.0
 for i = 1:tot_atom_num
-    global dq += sqrt(mass[i]*mass1/mass2)*dot(vector[i],total_dr[i]/bohr)
+    global dq += sqrt(mass[i]*mass1/mass2)*dot(vector[i],total_dr[i]/bohr)   # dq = sum(sqrt(m)*eigenvector*dr)
     global norm += sum_array(vector[i])
 end
 dq_amu = dq*amu_conv
